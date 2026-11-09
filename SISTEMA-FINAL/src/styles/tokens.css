@@ -1,0 +1,229 @@
+/* =========================================================
+   FleetOps Design System — tokens
+   Tokens visuais FleetOps.
+   Tema escuro é o padrão do produto.
+   ========================================================= */
+
+:root {
+  color-scheme: dark;
+
+  /* Marca oficial */
+  --fo-primary: #2563eb;
+  --fo-primary-dark: #1e40af;
+  --fo-bg: #0b1424;
+  --fo-surface: #1f2937;
+  --fo-sidebar: #0e1a2e;
+  --fo-text: #e5e7eb;
+  --fo-text-muted: #9ca3af;
+  --fo-border: rgba(229, 231, 235, 0.12);
+  --fo-success: #22c55e;
+  --fo-warning: #f59e0b;
+  --fo-danger: #ef4444;
+  --fo-inactive: #6b7280;
+  --fo-glow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  --fo-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* Aliases usados pelo app existente */
+  --color-navy: #0e1a2e;
+  --color-navy-soft: #152238;
+
+  --color-brand: #2563eb;
+  --color-primary: var(--fo-primary);
+  --color-primary-hover: var(--fo-primary-dark);
+  --color-primary-focus: rgba(37, 99, 235, 0.35);
+  --color-primary-tint: rgba(37, 99, 235, 0.14);
+
+  --color-success: var(--fo-success);
+  --color-success-bg: rgba(34, 197, 94, 0.14);
+
+  --color-info: #60a5fa;
+  --color-info-bg: rgba(37, 99, 235, 0.16);
+
+  --color-accent: var(--fo-primary);
+  --color-accent-bg: rgba(37, 99, 235, 0.14);
+
+  --color-danger: var(--fo-danger);
+  --color-danger-hover: #dc2626;
+  --color-danger-bg: rgba(239, 68, 68, 0.14);
+
+  --color-warning: var(--fo-warning);
+  --color-warning-bg: rgba(245, 158, 11, 0.14);
+
+  --color-bg: var(--fo-bg);
+  --color-surface: var(--fo-surface);
+  --color-surface-alt: #162033;
+
+  --color-border: var(--fo-border);
+  --color-border-strong: rgba(229, 231, 235, 0.22);
+
+  --color-text: var(--fo-text);
+  --color-text-primary: #f8fafc;
+  --color-text-muted: var(--fo-text-muted);
+  --color-text-soft: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  --sidebar-bg: var(--fo-sidebar);
+  --sidebar-text: #f8fafc;
+  --sidebar-text-muted: rgba(229, 231, 235, 0.62);
+  --sidebar-text-soft: rgba(229, 231, 235, 0.82);
+  --sidebar-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-active: #ffffff;
+  --sidebar-active-bg: var(--fo-primary);
+  --sidebar-border: var(--fo-border);
+  --sidebar-avatar-bg: rgba(255, 255, 255, 0.08);
+  --sidebar-scrim: rgba(0, 0, 0, 0.55);
+  --sidebar-width: 240px;
+
+  --logout-bg: transparent;
+  --logout-border: var(--fo-border);
+  --logout-text: var(--fo-text);
+  --logout-hover-bg: rgba(255, 255, 255, 0.06);
+  --logout-hover-text: #ffffff;
+
+  --status-disponivel: var(--fo-success);
+  --status-disponivel-bg: rgba(34, 197, 94, 0.14);
+
+  --status-em_uso: var(--fo-warning);
+  --status-em_uso-bg: rgba(245, 158, 11, 0.14);
+
+  --status-manutencao: var(--fo-warning);
+  --status-manutencao-bg: rgba(245, 158, 11, 0.14);
+
+  --status-inativo: var(--fo-inactive);
+  --status-inativo-bg: rgba(107, 114, 128, 0.18);
+
+  --status-pendente: var(--fo-warning);
+  --status-pendente-bg: rgba(245, 158, 11, 0.14);
+
+  --status-aprovada: var(--fo-primary);
+  --status-aprovada-bg: rgba(37, 99, 235, 0.16);
+
+  --status-aprovado: var(--fo-success);
+  --status-aprovado-bg: rgba(34, 197, 94, 0.14);
+
+  --status-negada: var(--fo-danger);
+  --status-negada-bg: rgba(239, 68, 68, 0.14);
+
+  --status-rejeitada: var(--fo-danger);
+  --status-rejeitada-bg: rgba(239, 68, 68, 0.14);
+
+  --status-em_andamento: #60a5fa;
+  --status-em_andamento-bg: rgba(37, 99, 235, 0.16);
+
+  --status-concluida: var(--fo-success);
+  --status-concluida-bg: rgba(34, 197, 94, 0.14);
+
+  --status-cancelada: var(--fo-inactive);
+  --status-cancelada-bg: rgba(107, 114, 128, 0.18);
+
+  --status-sem_cnh: var(--fo-inactive);
+  --status-sem_cnh-bg: rgba(107, 114, 128, 0.18);
+
+  --status-proxima_vencimento: var(--fo-warning);
+  --status-proxima_vencimento-bg: rgba(245, 158, 11, 0.14);
+
+  --status-vencida: var(--fo-danger);
+  --status-vencida-bg: rgba(239, 68, 68, 0.14);
+
+  --modal-overlay: rgba(0, 0, 0, 0.72);
+  --photo-remove-bg: rgba(0, 0, 0, 0.82);
+
+  --login-glow-primary: rgba(37, 99, 235, 0.35);
+  --login-glow-secondary: rgba(30, 64, 175, 0.28);
+
+  --font-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-numeric: 'Montserrat', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --leading-tight: 1.25;
+  --leading-body: 1.5;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --shadow-md: var(--fo-shadow);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --topbar-height: 64px;
+  /* Área principal usa 100% da largura disponível (sem teto artificial). */
+  --content-max: none;
+
+  --transition-fast: 140ms ease;
+  --transition-normal: 200ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--fo-glow);
+}

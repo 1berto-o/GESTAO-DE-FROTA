@@ -1,0 +1,19 @@
+{
+  "brand": "FleetOps",
+  "tagline": "Sua frota, sempre no controle.",
+  "descriptor": "Gestão de frotas inteligente",
+  "slogan_secundario": "Mais eficiência. Menos custos.",
+  "colors": {
+    "primary": "#2563EB",
+    "primaryDark": "#1E40AF",
+    "background": "#0B1424",
+    "surface": "#1F2937",
+    "text": "#E5E7EB",
+    "success": "#22C55E",
+    "warning": "#F59E0B",
+    "danger": "#EF4444"
+  },
+  "typography": { "family": "Montserrat", "weights": [300, 400, 500, 600, 700] },
+  "radius": { "sm": 8, "md": 12, "lg": 16, "pill": 999 },
+  "icons": { "library": "Lucide", "style": "outline, stroke 1.75, cor primary" }
+}

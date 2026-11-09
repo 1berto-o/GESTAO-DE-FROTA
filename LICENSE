@@ -1,0 +1,55 @@
+Copyright (c) 2026 Humberto Gabriel Bezerra de Oliveira
+All rights reserved.
+
+FleetOps — Proprietary Evaluation License
+=========================================
+
+This software and its associated documentation files (the "Software") are
+the exclusive intellectual property of Humberto Gabriel Bezerra de Oliveira
+(the "Owner").
+
+1. Permitted use
+----------------
+Subject to this license, you may:
+
+  (a) view and download the Software from its public repository;
+  (b) use the Software solely for personal evaluation and personal study; and
+  (c) run the Software in a local study or evaluation environment.
+
+2. Restrictions
+---------------
+Except as expressly permitted above, you may not:
+
+  (a) use the Software for commercial purposes or any form of economic
+      exploitation;
+  (b) modify, adapt, translate, or create derivative works based on the
+      Software;
+  (c) redistribute, sublicense, sell, rent, lease, lend, publish, host, or
+      otherwise make available copies of the Software or any of its
+      components; or
+  (d) remove or alter any copyright, attribution, or proprietary notices.
+
+3. Reservation of rights
+------------------------
+All copyrights and other intellectual property rights in the Software remain
+with the Owner. Public availability of the Software on GitHub does not
+transfer ownership and does not grant any rights beyond those expressly
+stated in this license.
+
+4. Additional authorization
+---------------------------
+Any use not expressly permitted by this license requires prior written
+authorization from the Owner.
+
+5. Disclaimer
+-------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL
+THE OWNER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM
+THE USE OF THE SOFTWARE.
+
+6. Contact
+----------
+For licensing inquiries, contact the Owner through the contact information
+published in the project repository.

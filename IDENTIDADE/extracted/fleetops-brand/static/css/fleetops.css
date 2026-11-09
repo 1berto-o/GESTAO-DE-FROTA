@@ -1,0 +1,149 @@
+/* ==========================================================
+   FleetOps — Design System (tokens + componentes base)
+   Fonte: Montserrat (Google Fonts) — pesos 300,400,500,600,700
+   Uso no Django: {% load static %} <link rel="stylesheet" href="{% static 'css/fleetops.css' %}">
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Cores da marca */
+  --fo-primary: #2563EB;
+  --fo-primary-dark: #1E40AF;
+  --fo-bg: #0B1424;
+  --fo-surface: #1F2937;
+  --fo-text: #E5E7EB;
+  --fo-text-muted: #9CA3AF;
+  --fo-border: rgba(229, 231, 235, 0.12);
+
+  /* Estados */
+  --fo-success: #22C55E;
+  --fo-warning: #F59E0B;
+  --fo-danger: #EF4444;
+  --fo-inactive: #6B7280;
+
+  /* Tipografia */
+  --fo-font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fo-fw-light: 300; --fo-fw-regular: 400; --fo-fw-medium: 500;
+  --fo-fw-semibold: 600; --fo-fw-bold: 700;
+
+  /* Forma */
+  --fo-radius-sm: 8px;
+  --fo-radius: 12px;
+  --fo-radius-lg: 16px;
+  --fo-radius-pill: 999px;
+  --fo-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --fo-glow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  --fo-gap: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--fo-bg);
+  color: var(--fo-text);
+  font-family: var(--fo-font);
+  font-weight: var(--fo-fw-regular);
+  line-height: 1.5;
+}
+h1, h2, h3, h4 { font-weight: var(--fo-fw-bold); margin: 0 0 .5em; }
+a { color: var(--fo-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.fo-muted { color: var(--fo-text-muted); }
+.fo-accent { color: var(--fo-primary); }
+
+/* ---------- Botões ---------- */
+.fo-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: var(--fo-radius-sm);
+  font: var(--fo-fw-semibold) 14px var(--fo-font);
+  border: 1px solid transparent; cursor: pointer;
+  transition: background .15s, border-color .15s, box-shadow .15s;
+}
+.fo-btn:focus-visible { outline: none; box-shadow: var(--fo-glow); }
+.fo-btn--primary { background: var(--fo-primary); color: #fff; }
+.fo-btn--primary:hover { background: var(--fo-primary-dark); }
+.fo-btn--secondary { background: transparent; color: var(--fo-text); border-color: var(--fo-border); }
+.fo-btn--secondary:hover { border-color: var(--fo-primary); }
+.fo-btn--link { background: none; color: var(--fo-primary); padding: 0; }
+.fo-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ---------- Badges de status ---------- */
+.fo-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: var(--fo-radius-pill);
+  font: var(--fo-fw-medium) 13px var(--fo-font);
+  background: var(--fo-surface); border: 1px solid var(--fo-border);
+}
+.fo-badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.fo-badge--success  { color: var(--fo-success); }
+.fo-badge--warning  { color: var(--fo-warning); }
+.fo-badge--danger   { color: var(--fo-danger); }
+.fo-badge--inactive { color: var(--fo-inactive); }
+.fo-badge > span { color: var(--fo-text); }
+
+/* ---------- Inputs ---------- */
+.fo-input, .fo-select {
+  width: 100%; padding: 10px 14px;
+  background: var(--fo-surface); color: var(--fo-text);
+  border: 1px solid var(--fo-border); border-radius: var(--fo-radius-sm);
+  font: var(--fo-fw-regular) 14px var(--fo-font);
+}
+.fo-input::placeholder { color: var(--fo-text-muted); }
+.fo-input:focus, .fo-select:focus { outline: none; border-color: var(--fo-primary); box-shadow: var(--fo-glow); }
+.fo-label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: var(--fo-fw-medium); color: var(--fo-text-muted); }
+
+/* ---------- Toggle ---------- */
+.fo-toggle { position: relative; width: 44px; height: 24px; display: inline-block; }
+.fo-toggle input { opacity: 0; width: 0; height: 0; }
+.fo-toggle span {
+  position: absolute; inset: 0; background: var(--fo-surface);
+  border: 1px solid var(--fo-border); border-radius: var(--fo-radius-pill); transition: .2s;
+}
+.fo-toggle span::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px;
+  background: var(--fo-text); border-radius: 50%; transition: .2s;
+}
+.fo-toggle input:checked + span { background: var(--fo-primary); border-color: var(--fo-primary); }
+.fo-toggle input:checked + span::after { transform: translateX(20px); background: #fff; }
+
+/* ---------- Progress ---------- */
+.fo-progress { height: 8px; background: var(--fo-surface); border-radius: var(--fo-radius-pill); overflow: hidden; }
+.fo-progress > div { height: 100%; background: var(--fo-primary); border-radius: inherit; }
+
+/* ---------- Cards / KPI ---------- */
+.fo-card {
+  background: var(--fo-surface); border: 1px solid var(--fo-border);
+  border-radius: var(--fo-radius); padding: 20px;
+}
+.fo-kpi { display: flex; flex-direction: column; gap: 4px; }
+.fo-kpi__value { font-size: 28px; font-weight: var(--fo-fw-bold); }
+.fo-kpi__label { font-size: 12px; color: var(--fo-text-muted); }
+.fo-kpi__delta { font-size: 12px; font-weight: var(--fo-fw-semibold); color: var(--fo-success); }
+.fo-kpi__delta--down { color: var(--fo-danger); }
+.fo-grid-kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--fo-gap); }
+
+/* ---------- Layout: sidebar + conteúdo ---------- */
+.fo-app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+.fo-sidebar { background: #0E1A2E; border-right: 1px solid var(--fo-border); padding: 20px 12px; }
+.fo-sidebar__logo { padding: 4px 12px 24px; }
+.fo-nav { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.fo-nav a {
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px;
+  border-radius: var(--fo-radius-sm); color: var(--fo-text);
+  font-size: 14px; font-weight: var(--fo-fw-medium);
+}
+.fo-nav a:hover { background: var(--fo-surface); text-decoration: none; }
+.fo-nav a.is-active { background: var(--fo-primary); color: #fff; }
+.fo-main { padding: 24px 32px; }
+.fo-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+
+@media (max-width: 860px) {
+  .fo-app { grid-template-columns: 1fr; }
+  .fo-sidebar { display: none; } /* trocar por menu hambúrguer no mobile */
+}
+
+/* ---------- Tabelas ---------- */
+.fo-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.fo-table th { text-align: left; color: var(--fo-text-muted); font-weight: var(--fo-fw-medium); padding: 10px 12px; border-bottom: 1px solid var(--fo-border); }
+.fo-table td { padding: 12px; border-bottom: 1px solid var(--fo-border); }
+.fo-table tr:hover td { background: rgba(255,255,255,.03); }

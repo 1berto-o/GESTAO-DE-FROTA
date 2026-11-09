@@ -1,0 +1,341 @@
+/* =========================================================
+   FleetOps brand layer
+   ========================================================= */
+
+.brand-logo {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.brand-logo-horizontal {
+  height: 36px;
+  width: auto;
+  max-width: 180px;
+}
+
+.brand-logo-vertical {
+  height: 112px;
+  width: auto;
+  max-width: 220px;
+}
+
+.sidebar-logo {
+  height: 34px;
+  max-width: 168px;
+}
+
+.sidebar-brand {
+  padding: 20px 16px 18px;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.sidebar-link {
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.sidebar-link.active {
+  background: var(--fo-primary);
+  color: #fff;
+  box-shadow: none;
+}
+
+.sidebar-link.active .sidebar-icon-svg {
+  color: #fff;
+}
+
+.sidebar-icon-svg {
+  color: var(--fo-primary);
+  flex-shrink: 0;
+}
+
+.sidebar-link:hover .sidebar-icon-svg {
+  color: var(--sidebar-text);
+}
+
+.sidebar-link.active:hover .sidebar-icon-svg {
+  color: #fff;
+}
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.topbar {
+  min-height: var(--topbar-height);
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(11, 20, 36, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.topbar-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.topbar-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.topbar-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-user-pill {
+  display: inline-flex;
+  align-items: center;
+}
+
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: none;
+}
+
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.icon-btn:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--fo-glow);
+  border-color: var(--fo-primary);
+}
+
+.field input,
+.field select,
+.field textarea,
+.password-input {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.field span {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.panel,
+.modal-card,
+.reservation-card,
+.stat-card,
+.vehicle-card,
+.termo-status-card,
+.empty-state,
+.alert-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.status-badge,
+.fo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: inherit;
+}
+
+.status-badge .status-label {
+  color: var(--color-text);
+}
+
+.fo-badge--success { color: var(--fo-success); }
+.fo-badge--warning { color: var(--fo-warning); }
+.fo-badge--danger { color: var(--fo-danger); }
+.fo-badge--inactive { color: var(--fo-inactive); }
+.fo-badge--info { color: var(--fo-primary); }
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Auth / login */
+.fo-auth {
+  position: relative;
+  overflow: hidden;
+  background: var(--fo-bg);
+}
+
+.fo-auth-stripes {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.28) 0 18%, transparent 18% 82%, rgba(30, 64, 175, 0.22) 82% 100%),
+    linear-gradient(315deg, transparent 0 72%, rgba(37, 99, 235, 0.12) 72% 100%);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.login-side {
+  background:
+    linear-gradient(165deg, rgba(37, 99, 235, 0.18), transparent 48%),
+    var(--fo-sidebar);
+}
+
+.login-brand-logo {
+  margin: 0 0 16px;
+  align-self: flex-start;
+}
+
+.login-tagline {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8fafc;
+  max-width: 18ch;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.login-side-copy {
+  margin: 0;
+  max-width: 34ch;
+  color: var(--sidebar-text-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .login-brand-logo {
+    margin: 0 auto 10px;
+    height: 72px;
+    max-width: 160px;
+  }
+
+  .login-tagline {
+    margin: 0 auto;
+    font-size: 16px;
+    max-width: 22ch;
+  }
+}
+
+.login-form-wrap {
+  background: transparent;
+}
+
+.fo-card-auth {
+  background: var(--fo-surface);
+  border: 1px solid var(--fo-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--fo-shadow);
+}
+
+.login-form-logo {
+  height: 28px;
+  max-width: 150px;
+  margin: 0 0 2px;
+}
+
+.brand-kicker {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sidebar-text-muted);
+}
+
+.bottom-nav {
+  background: var(--fo-sidebar);
+  border-top: 1px solid var(--fo-border);
+}
+
+.bottom-nav-link.active {
+  color: #fff;
+  background: var(--fo-primary);
+}
+
+.bottom-nav-icon-svg {
+  color: var(--fo-primary);
+}
+
+.bottom-nav-link.active .bottom-nav-icon-svg {
+  color: #fff;
+}
+
+.powered-by {
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.stat-card-value,
+.alert-card-value,
+.fo-kpi__value {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.modal-overlay {
+  background: var(--modal-overlay);
+}
+
+@media (max-width: 860px) {
+  .topbar-subtitle {
+    display: none;
+  }
+
+  .brand-logo-vertical {
+    height: 88px;
+  }
+}
